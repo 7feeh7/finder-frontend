@@ -1,0 +1,19 @@
+.search-data {
+    list-style-type: none;
+    margin-left: 39%;
+    margin-top: 30px;
+}
+
+.search-data ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.search-data ul li  {
+    display: flex;
+}
+
+.search-data ul li img {
+    margin-right: 10px;
+}
