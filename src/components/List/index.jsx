@@ -7,7 +7,7 @@ function ListFinder({ recentlySearched }) {
     return (
         <div className="search-data">
             <h3>Recently searched</h3>
-            <ul>
+            {recentlySearched.length != 0 ? <ul>
                 {recentlySearched.map(item => {
                     return (
                         <li key={item._id}>
@@ -16,7 +16,7 @@ function ListFinder({ recentlySearched }) {
                         </li>
                     )
                 })}
-            </ul>
+            </ul> : <span>You didn’t search for anything yet.</span>}
         </div>
     )
 }
