@@ -1,7 +1,13 @@
+@media ( max-width: 420px ) {
+    .search-data {
+        width: 300px !important;
+    }
+}
+
 .search-data {
     list-style-type: none;
-    margin-left: 39%;
     margin-top: 30px;
+    width: 420px;
 }
 
 .search-data ul {

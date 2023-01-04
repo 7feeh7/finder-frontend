@@ -1,21 +1,22 @@
-import './App.css'
-
-import suggestionsMock from '../suggestions.json'
+import { useState } from 'react'
 
 import LogoFinder from './components/Logo'
 import SearchBar from './components/SearchBar'
 import ListFinder from './components/List'
 
+import './App.css'
+
 function App() {
+  const[recentlySearched, setRecentlySearched] = useState([])
 
   return (
     <>
       <div className="container">
         <LogoFinder />
-        <SearchBar data={suggestionsMock} placeholder="Search..." />
+        <SearchBar placeholder="Search..." recentlySearched={recentlySearched} setRecentlySearched={setRecentlySearched} />
+        <ListFinder recentlySearched={recentlySearched} />
       </div>
 
-      <ListFinder data={suggestionsMock} />
     </>
 
   )
